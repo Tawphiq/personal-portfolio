@@ -4,10 +4,10 @@ import useMediaQuery from '../hooks/useMediaQuery'
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
-  const anchorstyle = selectedPage === lowerCasePage ? 'text-yellow' : ''
+  
   return (
     <AnchorLink
-      className={`${anchorstyle} hover:text-yellow transition duration-500`}
+      className={`${selectedPage === lowerCasePage ? 'text-yellow' : ''} hover:text-yellow transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -42,7 +42,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} />
                 <Link 
-                page = "Testimonials"
+                page = "About"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} />
                 <Link 
@@ -80,7 +80,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} />
                 <Link 
-                page = "Testimonials"
+                page = "About"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} />
                 <Link 
