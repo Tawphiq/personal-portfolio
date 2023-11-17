@@ -3,6 +3,9 @@ import useMediaQuery from './hooks/useMediaQuery'
 import Navbar from './scenes/Navbar'
 import DotGroup from './scenes/DotGroup'
 import Landing from './scenes/Landing'
+import LineGradient from './components/LineGradient'
+import MySkills from './scenes/MySkills'
+import Projects from './scenes/Projects'
 
 const App = () => {
   const [selectedPage, setSelectedPage] = useState('home')
@@ -32,6 +35,14 @@ const App = () => {
           />
         )}
         <Landing selectedPage={setSelectedPage}/>
+      </div>
+      <LineGradient />
+      <div className='w-5/6 mx-auto md:h-full'>
+        <MySkills />
+      </div>
+      <LineGradient />
+      <div className='w-5/6 mx-auto'>
+        <Projects />
       </div>
     </div>
   )
